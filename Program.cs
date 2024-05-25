@@ -52,16 +52,14 @@ using AlgorithmsAndDataStructures.DataStructure;
 #endregion
 
 #region Linked Queue
-LinkedQueue<int> Myqueue=new LinkedQueue<int>();
+LinkedQueue<int> Myqueue = new LinkedQueue<int>();
 Myqueue.Enqueue(1);
 Myqueue.Enqueue(2);
 Myqueue.Enqueue(3);
-Myqueue.Enqueue(4);
 Myqueue.Enqueue(5);
 Myqueue.Enqueue(6);
 Console.WriteLine(Myqueue.GetFront());
 Console.WriteLine(Myqueue.GetBack());
-Myqueue.Dequeue();
 Myqueue.Dequeue();
 Myqueue.Dequeue();
 Myqueue.Dequeue();
