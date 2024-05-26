@@ -106,18 +106,29 @@ using System.Collections;
 
 #endregion
 
-LinkedList<int> l = new LinkedList<int>();
-l.AddLast(5);
-l.AddLast(6);
-l.AddLast(7);
-l.AddLast(8);
-l.AddAfter(new LinkedListNode<int>(7),new LinkedListNode<int>(88));
-LinkedListNode<int> n = l.First;
-while (n!=null)
-{
-    Console.WriteLine(n.Value);
-    n=n.Next;
-}
+#region Custom Linked List
+CustomLinkedList<int> linkedLisst = new CustomLinkedList<int>();
+linkedLisst.AddFirst(1);
+linkedLisst.AddFirst(2);
+linkedLisst.AddFirst(3);
+linkedLisst.AddFirst(4);
+linkedLisst.AddFirst(5);
+linkedLisst.AddFirst(6);
+linkedLisst.AddFirst(7);
+linkedLisst.Print();
+//Console.WriteLine("---------------");
+//linkedLisst.AddBefore(0,6);
+Console.WriteLine("---------------");
+//linkedLisst.Print();
+//linkedLisst.RemoveFirst();
+//linkedLisst.Print();
+//linkedLisst.RemoveLast();
+//Console.WriteLine("---------------");
+//linkedLisst.Print();
+linkedLisst.RemoveAt(3);
+linkedLisst.Print();
+
+#endregion
 
 
 
