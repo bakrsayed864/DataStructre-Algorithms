@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace AlgorithmsAndDataStructures.DataStructure
 {
-    internal class CustomeArrayList<T>
+    internal class CustomArrayList<T>
     {
         private int length;
         private T[] array;
         private int MaxSize;
-        public CustomeArrayList(int Size)
+        public CustomArrayList(int Size)
         {
             if (Size <= 0)
                 MaxSize = 10;
@@ -71,10 +71,11 @@ namespace AlgorithmsAndDataStructures.DataStructure
             }
             else
             {
-                for(int i = pos; i < length; i++)
+                for(int i = pos; i < length-1; i++)
                 {
                     array[i] = array[i+1];
                 }
+                length--;
             }
         }
         public void Append(T element)
