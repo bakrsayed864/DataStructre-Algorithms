@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -171,17 +172,24 @@ namespace AlgorithmsAndDataStructures.DataStructure
                 {
                     Node<T> curr = Head;
                     Node<T> prev = Head;
-                    while (curr.Next != null&&!curr.Value.Equals(element)) 
+                    while (curr != null&&!curr.Value.Equals(element)) 
                     {
                         prev = curr;
                         curr = curr.Next;
                     }
+                    if (curr==null) 
+                    {
+                        Console.WriteLine("element not found..");
+                        return;
+                    }
+                    else { 
                     prev.Next = curr.Next;
                     if (curr.Next == null)
                     {
                         Tail = prev;
                     }
                     curr.Next = null;
+                    }
                 }
                 length--;
             }
@@ -219,6 +227,55 @@ namespace AlgorithmsAndDataStructures.DataStructure
                     }
                     curr.Next = null;
                 }
+            }
+        }
+        public void Reverse()
+        {
+            Node<T> prev = null;
+            Node<T> curr = Head;
+            Node<T> next=null;
+            DoReverse(prev,curr,next);
+        }
+        private void DoReverse(Node<T> prev,Node<T> curr,Node<T> next)
+        {
+            if (curr == null)//base case (||curr==next==null)
+            {
+                Head = prev;
+                return;
+            }
+            next = curr.Next;
+            curr.Next = prev;
+            prev = curr;
+            curr=next;
+            DoReverse (prev,curr,next);
+        }
+        public int Search(T element)
+        {
+            if (IsEmpty())
+            {
+                Console.WriteLine("Linked List is empty");
+                return -1;
+            }
+            else if (element.Equals(Head.Value))
+            {
+                return 0;
+            }
+            else if (element.Equals(Tail.Value))
+            {
+                return length-1;
+            }
+            else
+            {
+                Node<T> temp = Head.Next;
+                for (int i = 1; temp!=null ; i++)
+                {
+                    if(temp.Value.Equals(element))
+                    {
+                        return i;
+                    }
+                    temp=temp.Next;
+                }
+                return -1;
             }
         }
         public void Print()

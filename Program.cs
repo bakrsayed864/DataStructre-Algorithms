@@ -107,30 +107,50 @@ using System.Collections;
 #endregion
 
 #region Custom Linked List
-CustomLinkedList<int> linkedLisst = new CustomLinkedList<int>();
-linkedLisst.AddFirst(1);
-linkedLisst.AddFirst(2);
-linkedLisst.AddFirst(3);
-linkedLisst.AddFirst(4);
-linkedLisst.AddFirst(5);
-linkedLisst.AddFirst(6);
-linkedLisst.AddFirst(7);
-linkedLisst.Print();
+//CustomLinkedList<int> linkedLisst = new CustomLinkedList<int>();
+//linkedLisst.AddFirst(1);
+//linkedLisst.AddFirst(2);
+//linkedLisst.AddFirst(3);
+//linkedLisst.AddFirst(4);
+//linkedLisst.AddFirst(5);
+//linkedLisst.AddFirst(6);
+//linkedLisst.AddFirst(7);
+//linkedLisst.Print();
 //Console.WriteLine("---------------");
 //linkedLisst.AddBefore(0,6);
-Console.WriteLine("---------------");
+//Console.WriteLine("---------------");
 //linkedLisst.Print();
 //linkedLisst.RemoveFirst();
 //linkedLisst.Print();
 //linkedLisst.RemoveLast();
 //Console.WriteLine("---------------");
 //linkedLisst.Print();
-linkedLisst.RemoveAt(3);
-linkedLisst.Print();
-
+//linkedLisst.RemoveElement(1);
+//linkedLisst.Print();
+//linkedLisst.Reverse();
+//linkedLisst.Print();
 #endregion
 
-
+#region Doubly Linked List
+DoublyLInkedList<int> DList=new DoublyLInkedList<int> { };
+DList.AddFirst(0);  
+DList.AddFirst(1);
+DList.AddFirst(2);
+DList.AddFirst(3);
+DList.AddFirst(4);
+DList.AddFirst(5);
+DList.AddFirst(6);
+DList.AddFirst(7);
+DList.AddFirst(8);
+DList.insertAt(0,66);
+DList.Display();
+Console.WriteLine("-------first--------");
+DList.RemoveFirst();
+DList.Display();
+Console.WriteLine("--------last-------");
+DList.RemoveLast();
+DList.Display();
+#endregion
 
 
 
