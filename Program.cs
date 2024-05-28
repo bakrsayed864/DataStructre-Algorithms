@@ -132,27 +132,38 @@ using System.Collections;
 #endregion
 
 #region Doubly Linked List
-DoublyLInkedList<int> DList=new DoublyLInkedList<int> { };
-DList.AddFirst(0);  
-DList.AddFirst(1);
-DList.AddFirst(2);
-DList.AddFirst(3);
-DList.AddFirst(4);
-DList.AddFirst(5);
-DList.AddFirst(6);
-DList.AddFirst(7);
-DList.AddFirst(8);
-DList.insertAt(0,66);
-DList.Display();
-Console.WriteLine("-------first--------");
-DList.RemoveFirst();
-DList.Display();
-Console.WriteLine("--------last-------");
-DList.RemoveLast();
-DList.Display();
+//DoublyLInkedList<int> DList=new DoublyLInkedList<int> { };
+//DList.AddFirst(0);  
+//DList.AddFirst(1);
+//DList.AddFirst(2);
+//DList.AddFirst(3);
+//DList.AddFirst(4);
+//DList.AddFirst(5);
+//DList.AddFirst(6);
+//DList.AddFirst(7);
+//DList.AddFirst(8);
+//DList.insertAt(0,66);
+//DList.Display();
+//Console.WriteLine("-------first--------");
+//DList.RemoveFirst();
+//DList.Display();
+//Console.WriteLine("--------last-------");
+//DList.RemoveLast();
+//DList.Display();
 #endregion
 
-
-
+#region merge sort
+List<int> l=new List<int>();
+l.Add(90);
+l.Add(80);
+l.Add(70);
+l.Add(50);
+l.Add(60);
+l.Add(220);
+l.Add(40);
+Algorithm.mergeSort(l);
+foreach(var item in l)
+    Console.WriteLine(item);
+#endregion
 
 
