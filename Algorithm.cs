@@ -8,6 +8,7 @@ namespace AlgorithmsAndDataStructures
 {
     internal class Algorithm
     {
+        #region sorting
         /// <summary>
         /// /
         /// </summary>
@@ -89,7 +90,10 @@ namespace AlgorithmsAndDataStructures
             }
             return list;
         }
-        
+
+        #region merge sort
+        //time complexity O(n logn)
+        //space complexity O(n)
         public static void mergeSort(List<int> list)
         {
             if (list == null || list.Count <= 1)
@@ -152,7 +156,39 @@ namespace AlgorithmsAndDataStructures
                 j++;
                 k++;
             }
-
         }
+        #endregion
+        #endregion
+
+        #region binary search
+        public static int binarySearch(List<int> list, int element)
+        {
+            int l = 0;
+            int r = list.Count - 1;
+            int m = (l + r) / 2;
+            return binarySearch(list, element, l, m, r);
+        }
+        private static int binarySearch(List<int> list, int element, int l, int m, int r)
+        {
+            if (l > r)
+                return -1;
+            else if (element == list[m])
+                return m;
+            else if (element > list[m])
+
+            {
+                l = m + 1;
+                m = (l + r) / 2;
+                return binarySearch(list, element, l, m, r);
+            }
+            else
+            {
+                r = m - 1;
+                m = (l + r) / 2;
+                return binarySearch(list, element, l, m, r);
+            }
+            // return -1;
+        }
+        #endregion
     }
 }

@@ -153,17 +153,14 @@ using System.Collections;
 #endregion
 
 #region merge sort
-List<int> l=new List<int>();
-l.Add(90);
-l.Add(80);
-l.Add(70);
+List<int> l = new List<int>();
+l.Add(10);
+l.Add(20);
+l.Add(30);
+l.Add(40);
 l.Add(50);
 l.Add(60);
-l.Add(220);
-l.Add(40);
-Algorithm.mergeSort(l);
-foreach(var item in l)
-    Console.WriteLine(item);
+Console.WriteLine(Algorithm.binarySearch(l,30));
 #endregion
 
 
